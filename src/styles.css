@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root{
+  --logo-font: 'Roboto Mono', monospace;
+  --body-font: 'Ubuntu', sans-serif;
+}
+
+/* Resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Fin Resets */
+
+/* Globales */
+html, body{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #F0F0F0;
+}
+header{
+  padding: .3rem 1rem ;
+  height: 50px;
+  background-color: #3C486B;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100% - 100px);
+}
+
+button{
+  width: 50%;
+  display: block;
+  padding: 15px 0px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: var(--body-font);
+  background-color: #F45050;
+  color: white;
+}
+button:hover{
+  background-color: #c74141;
+}
+
+
+textarea{
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 450px;
+  height: 380px;
+  font-size: 1.1rem;
+  font-family: var(--logo-font);
+  resize: none;
+}
+
+#result-area{
+  background-color: white;
+}
+
+
+i{
+  margin-left: 5px;
+}
+
+footer{
+  height: 50px;
+  padding: .7rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: var(--logo-font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer i{
+  font-size: 1.7rem;
+  color: #3C486B;
+  padding: 3px;
+}
+/* Fin Globales */
+
+
+
+
+/* Logo */
+.name-header{
+  font-family: var(--logo-font);
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+.maquina-escribir{
+  position: relative;
+}
+.maquina-escribir::after{
+  content: '';
+  background-color: #3C486B;
+  border-left: 6px solid white;
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  right: 0;
+  animation: typing 2s infinite alternate steps(12);
+}
+@keyframes typing {
+  from{
+    width: 100%;
+  }to{
+    width: 0;
+  }
+}
+/* Fin Logo */
+
+.container{
+  display: flex;
+  max-width: 1200px;
+  gap: 2.5rem;
+}
+
+.container-results{
+  position: relative;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.hide{
+  font-family: var(--body-font);
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hide picture{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img{
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.hide p{
+  margin: .5rem auto;
+  font-size: 1.3rem;
+}
+
+#btn-copy{
+  background-color: #32b171;
+}
+
+#btn-copy:hover{
+  background-color: #0b9952;
+}
+
+
+@media (min-width:450px) and (max-width:950px) {
+  main{
+    padding: 1rem;
+  }
+  .container{
+    flex-direction: column;
+    max-width: auto;
+    width: 80%;
+  }
+  textarea{
+    width: 100%;
+  }
+  footer{
+    font-size: 15px;
+  }
+}
+
+@media (max-width:449px) {
+  main{
+    height: auto;
+    padding: 1rem 0;
+  }
+  .container{
+    flex-direction: column;
+    max-width: auto;
+    width: 90%;
+    min-width: 300px;
+    gap: 1rem;
+  }
+  textarea{
+    width: 100%;
+    height: 250px;
+  }
+  button{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-size: 15px;
+    gap: 5px;
+    padding: 10px;
+  }
+  .footer-icons{
+    display: flex;
+  }
+  .container-results{
+    height: 320px;
+  }
+  .hide{
+    height: 100%
+  
+  }
+  .hide img{
+    width: 250px;
+  }
+  .hide h2{
+    font-size: 20px;
+  }
+  .hide p{
+    font-size: 15px;
+  }
+}

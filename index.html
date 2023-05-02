@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encriptador Web</title>
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="icon" type="image/x-icon" href="images/lock-alt-solid-24.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+  <header id="header">
+    <div class="name-header">
+      <p class="logo">&lt;<span class="maquina-escribir">YanL-Dev/&gt;.</span></p>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="encryptor-area">
+        <form>
+          <textarea name="text-area" id="text-area" cols="50" rows="10" autofocus required placeholder="Ingrese el texto aqui"></textarea>
+          <div class="buttons">
+            <button id="btn-encryptor">Encriptar <i class="fa-solid fa-lock"></i></button>
+            <button id="btn-decryptor">Desencriptar <i class="fa-solid fa-lock-open"></i></button>
+          </div>
+        </form>
+      </div>
+
+      <div class="container-results">
+        <form>
+          <textarea name="result-area" id="result-area" cols="50" rows="10" disabled></textarea>
+          <div class="buttons">
+            <button id="btn-copy">Copiar <i class="fa-solid fa-copy"></i></button>
+          </div>
+        </form>
+        <div  id="hide" class="hide">
+          <picture>
+            <img src="images/loader.svg" alt="Loader-Img">  
+          </picture>
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Developed with love by yanl-dev<span class="heart"> ❤️ </span></p>
+    <div class="footer-icons">
+      <a href=""><i class="fa-brands fa-linkedin"></i></a>
+      <a href=""><i class="fa-brands fa-github"></i></a>
+    </div>
+  </footer>
+<script src="src/app.js"></script>
+</body>
+</html>
